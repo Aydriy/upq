@@ -1,0 +1,152 @@
+@import '_breackpoints'
+    
+.main
+    height: 2040px
+    margin-top: 92px
+
+.circleInner, .circleOut, .circleInnertelephone
+    position: absolute
+
+.circleInnerBackground
+    margin: auto
+    z-index: -1
+
+.circleInner
+    margin: auto
+    z-index: 1
+    
+.circleInnertelephone
+    padding-top: 105px
+    z-index: 100
+
+
+.box
+    height: 529px
+    width: 529px
+    background-image: url('../../image/main/Oval.png')
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: -10
+
+    
+
+
+    
+.circleInnerBackground
+    width: 300px
+    height: 300px
+    background: #F2F2F2
+    border-radius: 50%
+    
+.track
+    display: flex
+    align-items: center
+
+@media (max-width: $screen-xl)
+    .track, .claim
+        flex-direction: column
+    .main
+        height: 100%
+        margin-bottom: 190px
+    .classify
+        flex-direction: column-reverse
+    .box
+        margin-bottom: 30px
+    .track .box
+        float: left
+ 
+
+.trackContainer
+    display: flex
+    flex-direction: column
+    margin-left: 83px
+    right: auto
+
+h1
+    font-family: Poppins
+    font-style: normal
+    font-weight: 800
+    font-size: 38px
+    line-height: 51px
+    letter-spacing: 0.4px
+    color: #00A031
+    margin-bottom: 28px
+
+h2
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px
+    letter-spacing: 0.2px;
+    color: #6C6C6C;
+
+.trackList li
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.2px
+    color: #6C6C6C
+    text-decoration: none
+    list-style-type: none
+    margin-left: 28px
+
+.check, .checkContainer
+    position: absolute
+
+.checkContainer
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 3px
+    
+.checkArrov
+    padding-bottom: 5px
+    padding-left: 4px
+
+.trackButtonText
+    font-family: Gilroy
+    font-size: 18px
+    line-height: 21px
+    text-align: center
+    color: #00A031
+
+.trackButton
+    height: 54px
+    width: 208px
+    border: 2px solid #00A031
+    border-radius: 28px
+    box-sizing: border-box
+    outline: none
+    background: #FFFFFF
+    cursor: pointer
+    margin-top: 32px
+    display: flex
+    align-items: center
+    justify-content: center
+    -webkit-transition: 1s ease
+    
+
+.arrow
+    margin-left: 15px
+
+.trackButton:hover
+    background: #baf59d
+    transition: .5s ease-in-out
+    border-color: #00A031
+    box-shadow: inset 0 1px 1px rgba(168, 255, 181, 0.013), 0 0 8px rgba(91, 252, 107,0.5)
+    
+
+.classify, .claim
+    display: flex
+    align-items: center
+    margin-top: 165px
+
+.transformTelephone
+    transform: rotate(18deg)
+
+.secondTelephoneh2
+    width: 500px
+    
+

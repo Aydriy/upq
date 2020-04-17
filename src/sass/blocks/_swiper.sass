@@ -1,0 +1,160 @@
+@import "_breackpoints"
+
+.swiper-wrapper
+    height: 500px
+
+.swiper-pagination
+    width: 100%
+    height: auto
+    margin-left: auto
+    margin-right: auto
+
+.swiper-pagination-bullet-active
+    display: inline-block
+    background: #00A031 !important
+       
+
+.swiper-pagination-bullet
+    background: #FFFFFF
+    opacity: 1
+    height: 13px
+    width: 13px
+       
+
+.swiper-slide 
+    text-align: center
+    font-size: 18px
+    background: none
+    height: 500px
+    
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+       
+
+.swipeWrap
+    margin-top: 20px
+
+.swiper-container 
+    margin-top: 20px
+    border-radius: 20px
+    width: 100%
+    height: 850px
+
+
+
+.swiper-button-prev 
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 27 44'%3E%3Cpath d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z' fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+
+.swiper-button-next 
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 27 44'%3E%3Cpath d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z' fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+
+    
+.swiper-content
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.swiperHead
+    margin-top: 150px
+    height: 100px
+    font-weight: 600
+    font-size: 90px
+    line-height: 100px
+    text-align: center
+    color: #FFFFFF
+
+@media (max-width: $screen-lg)
+    .swiperHead
+        height: 70px
+        font-size: 60px
+        line-height: 70px
+    .swiper-container 
+        height: 750px  
+
+@media (max-width: $screen-md)
+    .swiperHead
+        margin-top: 100px
+        height: 60px
+        font-size: 40px
+        line-height: 60px
+    .swiper-container 
+        margin-top: 10px
+        border-radius: 20px
+        height: 650px  
+    .swiper-content
+        width: 90%
+    .swiperSection
+        margin-top: 100px
+
+@media (max-width: $screen-sm)
+    .swiperHead
+        margin-top: 80px
+        margin-bottom: 40px
+        height: 50px
+        font-size: 40px
+        line-height: 50px
+    .swiper-container 
+        height: 550px  
+    .swiperParagraph
+        margin-bottom: 30px
+    .swiper-content
+        width: 80%
+        
+.swiperParagraph
+    margin-top: 25px
+    height: 32px
+    font-weight: 600
+    font-size: 18px
+    line-height: 32px
+    letter-spacing: 0.2px
+    color: #FFFFFF
+
+.swiperButtonText
+    height: 22px
+    font-family: Gilroy
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+    letter-spacing: 0.1px
+    color: #F4FBF6
+
+.swiperButton
+    height: 54px
+    width: 172px
+    background: #00A031
+    border-radius: 27px
+    outline: none
+    border: none
+    cursor: pointer
+    margin-top: 54px
+
+.swiperButton:hover
+    background: #008000
+    transition: 0.3s
+
+
+
+.swiper-pagination-bullet-active .inner-dot
+    margin-top: -4.5px
+    margin-left: -4.5px
+    height: 21px
+    width: 21px
+    border: 1px solid #00A031
+    border-radius: 50%
+    padding: 10px
+    position: absolute
+
+

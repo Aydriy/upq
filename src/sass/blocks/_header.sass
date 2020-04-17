@@ -1,0 +1,190 @@
+@import "_breackpoints"
+    
+.nav
+    display: flex
+    
+
+.logo
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding-top: 26px
+    z-index: 100
+
+    &_svg
+        margin-right: 13px
+
+@media (max-width: $screen-md)
+    .logo
+        margin-left: 20px
+
+.UPQ
+    height: 32px
+    left: 21.88%
+    right: 67.95%
+    margin-top: 12px
+    font-weight: bold
+    font-size: 28px
+    line-height: 32px
+    color: #FFFFFF
+    z-index: 100
+
+.header
+    background-image: url('../../image/header/Bitmap.png')
+    height: 1062px
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 1
+    overflow: hidden
+    position: relative
+    
+
+.navItem
+    width: 437px
+    height: 24px
+    padding-top: 26px
+    z-index: 100
+    
+// @media (max-width: $screen-sm)
+//     .header
+//         height: 162px
+
+@media (max-width: $screen-md)
+    .navItem
+        display: none
+    .header
+        height: 862px
+        
+
+@media (max-width: $screen-lg-max)
+    .navItem
+        margin-left: 80px
+
+        
+@media (min-width: $screen-xl)
+    .navItem
+        margin-left: 492px
+    
+    
+.containerNav
+    z-index: 100
+    
+
+@media (max-width: $screen-md)
+    .nav
+        display: flex
+        justify-content: space-between
+    
+
+@media (min-width: $screen-md)
+    .containerNav
+        height: 38px
+        display: flex
+        align-items: center
+        justify-content: center
+
+
+.burgerButton
+    z-index: 100
+    position: relative
+    
+    
+
+.mask
+    height: 1062px
+    position: absolute
+    left: 0%
+    right: 0%
+    top: 0%
+    bottom: 80.57%
+    width: 100%
+    mix-blend-mode: normal
+    opacity: 0.7
+    z-index: 1
+    
+    
+.swiperSection
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 109px
+    margin-top: 204px
+    width: 1540px
+    height: 580px
+    margin-right: auto
+    margin-left: auto
+    background: none
+        
+@media (max-width: 1540px)
+    .swiperSection
+        width: 100%
+        padding-right: 10px
+        padding-left: 10px
+
+.nav-burger-wrapper
+    position: fixed
+    right: 0
+    z-index: 100
+
+
+// button burger menu
+@media (min-width: $screen-md)
+    .nav-burger-wrapper
+        display: none
+
+.burger-nav
+    display: inline-block
+    position: absolute
+    right: -350px
+    top: 0
+    height: 1062px
+    width: 350px
+    background-color: rgba(0, 160, 49, 0.3)
+    z-index: 90
+    transition: transform 0.3s 
+    &__title
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 20px
+    &__title-p
+        color: #ffffff;
+        text-decoration: none;
+        padding-right: 2px;
+        padding-left: 2px;
+        height: 21px;
+        padding-bottom: 1px;
+    &__navElems ._navbar_navelement__2IQaG
+        flex-direction: column
+        margin-top: 30px
+        margin-left: 30px
+    &__navElems ._navbar_navelement__2IQaG ._navbar_navEl__1ONAz
+        margin-bottom: 30px
+        
+
+@media (max-width: $screen-sm)
+    .logo-active
+        transform: translateY(-100%)
+        transition: transform 0.3s 
+    .logo
+        transition: transform 0.3s 
+
+.burger-nav-active
+    transform: translateX(-100%)
+
+
+
+
+// #filterToolbar
+//     background-color: rgba(107, 105, 105, 0.5)
+//     position: fixed
+//     top: 0
+//     right: 0
+//     bottom: 0
+//     left: 0
+//     z-index: 100
+//     display: none
+    
+
+
