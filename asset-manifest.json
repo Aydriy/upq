@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/upq/static/css/main.d1b05096.chunk.css",
-    "main.js": "/upq/static/js/main.e6f47096.chunk.js",
-    "main.js.map": "/upq/static/js/main.e6f47096.chunk.js.map",
+    "main.css": "/upq/static/css/main.4f3976b9.chunk.css",
+    "main.js": "/upq/static/js/main.26f48959.chunk.js",
+    "main.js.map": "/upq/static/js/main.26f48959.chunk.js.map",
     "runtime-main.js": "/upq/static/js/runtime-main.ab18817b.js",
     "runtime-main.js.map": "/upq/static/js/runtime-main.ab18817b.js.map",
-    "static/js/2.18024ac9.chunk.js": "/upq/static/js/2.18024ac9.chunk.js",
-    "static/js/2.18024ac9.chunk.js.map": "/upq/static/js/2.18024ac9.chunk.js.map",
+    "static/js/2.ab30bbec.chunk.js": "/upq/static/js/2.ab30bbec.chunk.js",
+    "static/js/2.ab30bbec.chunk.js.map": "/upq/static/js/2.ab30bbec.chunk.js.map",
     "index.html": "/upq/index.html",
-    "precache-manifest.67922e2a21a449891acf1e343fd96ec5.js": "/upq/precache-manifest.67922e2a21a449891acf1e343fd96ec5.js",
+    "precache-manifest.40b2350726d37481b4bf38c9c3adb240.js": "/upq/precache-manifest.40b2350726d37481b4bf38c9c3adb240.js",
     "service-worker.js": "/upq/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/upq/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.18024ac9.chunk.js.LICENSE.txt": "/upq/static/js/2.18024ac9.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/upq/static/media/logo.5d5d9eef.svg"
+    "static/css/main.4f3976b9.chunk.css.map": "/upq/static/css/main.4f3976b9.chunk.css.map",
+    "static/js/2.ab30bbec.chunk.js.LICENSE.txt": "/upq/static/js/2.ab30bbec.chunk.js.LICENSE.txt",
+    "static/media/style.sass": "/upq/static/media/Oval.8a64e658.png",
+    "static/media/Person.png": "/upq/static/media/Person.ead28026.png",
+    "static/media/Person2.jpg": "/upq/static/media/Person2.f0c488bb.jpg",
+    "static/media/Person3.jpg": "/upq/static/media/Person3.cd2c572e.jpg",
+    "static/media/Person4.jpg": "/upq/static/media/Person4.82473a05.jpg",
+    "static/media/Person5.jpg": "/upq/static/media/Person5.ef5b4e35.jpg",
+    "static/media/markerBig.svg": "/upq/static/media/markerBig.c0dbc5b4.svg",
+    "static/media/markerSmall.svg": "/upq/static/media/markerSmall.087cdfc4.svg",
+    "static/media/mask.png": "/upq/static/media/mask.59f40b69.png",
+    "static/media/telephone.png": "/upq/static/media/telephone.7e389dad.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ab18817b.js",
-    "static/js/2.18024ac9.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.e6f47096.chunk.js"
+    "static/js/2.ab30bbec.chunk.js",
+    "static/css/main.4f3976b9.chunk.css",
+    "static/js/main.26f48959.chunk.js"
   ]
 }
