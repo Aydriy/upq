@@ -7,7 +7,7 @@ import Burger from "./Burger.jsx";
 
 class Header extends React.Component {
   state = {
-    show: true
+    show: true,
   };
 
   render() {
@@ -86,6 +86,7 @@ class Header extends React.Component {
               >
                 <div className="burger-nav__title">
                   <p className="burger-nav__title-p">NAVIGATION</p>
+                  <p>dsa</p>
                 </div>
 
                 <div className="burger-nav__navElems">
