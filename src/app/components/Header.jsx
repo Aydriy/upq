@@ -86,7 +86,6 @@ class Header extends React.Component {
               >
                 <div className="burger-nav__title">
                   <p className="burger-nav__title-p">NAVIGATION</p>
-                  <p>dsa</p>
                 </div>
 
                 <div className="burger-nav__navElems">

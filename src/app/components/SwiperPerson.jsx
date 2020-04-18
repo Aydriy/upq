@@ -18,7 +18,7 @@ class SliderPerson extends React.Component {
         "Julia Harrington",
         "Brendon Treck",
         "Robert Diego",
-        "Antonio Pettis"
+        "Antonio Pettis",
       ],
       postTextTitle: [
         "Art Director",
@@ -27,7 +27,7 @@ class SliderPerson extends React.Component {
         "Art Director",
         "Art Director",
         "Art Director",
-        "Art Director"
+        "Art Director",
       ],
       textSlider: [
         "Have you ever had a problem with a burned light? Thanks to the effort of Thomas Edison we no longer need to invent a light bulb. We just go to the store or our cupboard and pull one out and screw it in. When we are feeling so low and deep in the pits, this is when we need light to see our way through.",
@@ -36,7 +36,7 @@ class SliderPerson extends React.Component {
         "Have you ever had a problem with a burned light? Thanks to the effort of Thomas Edison we no longer need to invent a light bulb. We just go to the store or our cupboard and pull one out and screw it in. When we are feeling so low and deep in the pits, this is when we need light to see our way through.",
         "Have you ever had a problem with a burned light? Thanks to the effort of Thomas Edison we no longer need to invent a light bulb. We just go to the store or our cupboard and pull one out and screw it in. When we are feeling so low and deep in the pits, this is when we need light to see our way through.",
         "Have you ever had a problem with a burned light? Thanks to the effort of Thomas Edison we no longer need to invent a light bulb. We just go to the store or our cupboard and pull one out and screw it in. When we are feeling so low and deep in the pits, this is when we need light to see our way through.",
-        "Have you ever had a problem with a burned light? Thanks to the effort of Thomas Edison we no longer need to invent a light bulb. We just go to the store or our cupboard and pull one out and screw it in. When we are feeling so low and deep in the pits, this is when we need light to see our way through."
+        "Have you ever had a problem with a burned light? Thanks to the effort of Thomas Edison we no longer need to invent a light bulb. We just go to the store or our cupboard and pull one out and screw it in. When we are feeling so low and deep in the pits, this is when we need light to see our way through.",
       ],
       name: [
         "Robert Diego",
@@ -45,11 +45,11 @@ class SliderPerson extends React.Component {
         "Julia Harrington",
         "Brendon Treck",
         "Robert Diego",
-        "Antonio Pettis"
+        "Antonio Pettis",
       ],
       currentImagesIndex: 0,
       canGoPrev: false,
-      canGoNext: true
+      canGoNext: true,
     };
     this.nextSlide = this.nextSlide.bind(this);
   }
@@ -87,104 +87,126 @@ class SliderPerson extends React.Component {
       <div className="sliderConteiner">
         <div className="carusel-conteiner">
           <div className="container-textfoto">
-            <div className="container-description">
-              <div className="carusel-slider">
-                <h1 className="titleSlide">
-                  {this.state.textTitleSlider[this.state.currentImagesIndex]}
-                </h1>
+            <div className="description-con">
+              <div className="container-description">
+                <div>
+                  <div className="carusel-slider">
+                    <h1 className="titleSlide">
+                      {
+                        this.state.textTitleSlider[
+                          this.state.currentImagesIndex
+                        ]
+                      }
+                    </h1>
 
-                <h2 className="postTitleSlide">
-                  {this.state.postTextTitle[this.state.currentImagesIndex]}
-                </h2>
-                <div className="descriptionSize">
-                  <p className="postDescription">
-                    {this.state.textSlider[this.state.currentImagesIndex]}
-                  </p>
+                    <h2 className="postTitleSlide">
+                      {this.state.postTextTitle[this.state.currentImagesIndex]}
+                    </h2>
+                    <div className="descriptionSize">
+                      <p className="postDescription">
+                        {this.state.textSlider[this.state.currentImagesIndex]}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="btn-conteiner">
-                <div className="btnSwiper">
-                  <button
-                    disabled={!this.state.canGoNext}
-                    className="btnRight"
-                    id="next"
-                    data-direction="next"
-                    onClick={this.nextSlide.bind(this)}
-                  >
-                    <div className="carusel-slider-button">
-                      <img
-                        src={
-                          this.state.images[this.state.currentImagesIndex + 1]
-                        }
-                        alt=""
-                        className="slide-botton-iamge"
-                      />
-                    </div>
-                    <div className="buttonArrowEndText">
-                      <div className="nextEndArrow">
-                        <p className="arrowText">NEXT</p>
-                        <svg
-                          width="28"
-                          height="8"
-                          viewBox="0 0 28 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 4.49123V3.50877H25.7357L22.4497 0.701754L23.2781 0L28 4L23.2781 8L22.4221 7.29825L25.7357 4.49123H0Z"
-                            fill="#00A031"
+                <div>
+                  <div className="btn-conteiner">
+                    <div className="btnSwiper">
+                      <button
+                        disabled={!this.state.canGoNext}
+                        className="btnRight"
+                        id="next"
+                        data-direction="next"
+                        onClick={this.nextSlide.bind(this)}
+                      >
+                        <div className="carusel-slider-button">
+                          <img
+                            src={
+                              this.state.images[
+                                this.state.currentImagesIndex + 1
+                              ]
+                            }
+                            alt=""
+                            className="slide-botton-iamge"
                           />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="arrowName">
-                          {this.state.name[this.state.currentImagesIndex + 1]}
-                        </h3>
-                      </div>
+                        </div>
+                        <div className="buttonArrowEndText">
+                          <div className="nextEndArrow">
+                            <p className="arrowText">NEXT</p>
+                            <svg
+                              width="28"
+                              height="8"
+                              viewBox="0 0 28 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 4.49123V3.50877H25.7357L22.4497 0.701754L23.2781 0L28 4L23.2781 8L22.4221 7.29825L25.7357 4.49123H0Z"
+                                fill="#00A031"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3 className="arrowName">
+                              {
+                                this.state.name[
+                                  this.state.currentImagesIndex + 1
+                                ]
+                              }
+                            </h3>
+                          </div>
+                        </div>
+                      </button>
                     </div>
-                  </button>
-                </div>
-                <div className="btnSwiper btn12">
-                  <button
-                    disabled={!this.state.canGoPrev}
-                    className="btnLeft"
-                    id="prev"
-                    data-direction="prev"
-                    onClick={this.nextSlide.bind(this)}
-                  >
-                    <div className="buttonArrowEndText">
-                      <div className="prevEndArrow">
-                        <svg
-                          width="28"
-                          height="8"
-                          viewBox="0 0 28 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M28 4.49123V3.50877H2.2643L5.5503 0.701754L4.72189 0L0 4L4.72189 8L5.57791 7.29825L2.2643 4.49123H28Z"
-                            fill="#00A031"
-                          />
-                        </svg>
-                        <p className="arrowText">PREV</p>
-                      </div>
-                      <div>
-                        <h3 className="arrowName arrowNamePrev">
-                          {this.state.name[this.state.currentImagesIndex - 1]}
-                        </h3>
-                      </div>
-                    </div>
+                    <div className="btnSwiper btn12">
+                      <button
+                        disabled={!this.state.canGoPrev}
+                        className="btnLeft"
+                        id="prev"
+                        data-direction="prev"
+                        onClick={this.nextSlide.bind(this)}
+                      >
+                        <div className="buttonArrowEndText">
+                          <div className="prevEndArrow">
+                            <svg
+                              width="28"
+                              height="8"
+                              viewBox="0 0 28 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M28 4.49123V3.50877H2.2643L5.5503 0.701754L4.72189 0L0 4L4.72189 8L5.57791 7.29825L2.2643 4.49123H28Z"
+                                fill="#00A031"
+                              />
+                            </svg>
+                            <p className="arrowText">PREV</p>
+                          </div>
+                          <div>
+                            <h3 className="arrowName arrowNamePrev">
+                              {
+                                this.state.name[
+                                  this.state.currentImagesIndex - 1
+                                ]
+                              }
+                            </h3>
+                          </div>
+                        </div>
 
-                    <div className="carusel-slider-button">
-                      <img
-                        src={
-                          this.state.images[this.state.currentImagesIndex - 1]
-                        }
-                        alt=""
-                        className="slide-botton-iamge"
-                      />
+                        <div className="carusel-slider-button">
+                          <img
+                            src={
+                              this.state.images[
+                                this.state.currentImagesIndex - 1
+                              ]
+                            }
+                            alt=""
+                            className="slide-botton-iamge"
+                          />
+                        </div>
+                      </button>
                     </div>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>

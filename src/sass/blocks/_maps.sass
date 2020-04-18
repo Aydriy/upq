@@ -1,10 +1,9 @@
+@import "_breackpoints"
+    
 .maps
-    height: 761px
     margin-top: 202px
+    margin-bottom: 190px
 
-.city
-    width: 324px
-    margin-right: 45px
 
 .meet
     margin-bottom: 57px
@@ -27,35 +26,132 @@
 .cityWrapper
     display: flex
     margin-left: 14px
+    padding-top: 24px
+    box-sizing: border-box
+    
+.containerMaps
+    display: flex
+
+.cityMaps
+    background-image: url('../../image/maps/bg.png')
+  
+
+.mapImg
+    height: 100%
+    width: 100%
+
+.maps
+    margin-bottom: 250px
     
 
-.cityContainer:after 
-    width: 244px
-    border-bottom: 1px solid #EEEEEE
-    display: block
-    clear: both
-    content: ""
-    position: relative
-
-
-
-.cityDescription
-    margin-left: 20px
-
-.cityMapIcon
-    height: 30px
-    width: 30px
+@media (min-width: 1260px)
+   
+    .city
+        width: 324px
+        margin-right: 45px
+    .meet-size
+        display: none
     
 
-.usa
-    font-weight: 600
-    font-size: 18px
-    line-height: 28px
-    letter-spacing: 0.2px
-    color: #00A031
-    margin-bottom: 5px
+@media (max-width: 1260px)
+    .containerMaps
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .city
+        width: 100%
+        display: flex
+        flex-direction: column
+    .city-container
+        display: grid
+        grid-template-rows: 129px 129px 
+        grid-template-columns: 324px 324px
+        grid-gap: 2vw
+    .city-container-wrapper
+        display: flex
+        justify-content: center
+        margin-bottom: 30px
+    .cityContainer
+        margin-right: 5px
+    .meet-size
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+    .meet
+        display: none
 
-.cityContainer a
-    text-decoration: none
+@media (min-width: $screen-lg)
+    .mapPos
+        margin-left: 58px
+        margin-top: 27px
+    .mapLoad
+        width: 702px
+        height: 761px
+    .mapClass
+        width: 702px
+        height: 761px
+    .mapClassEl
+        width: 702px
+        height: 761px
+    .LosAngelesPath
+        display: flex
+    .mapImgDescriptionBlock
+        width: 321px
+        height: 496px
+        position: absolute
+        background: #FFFFFF;
+        box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.0758039)
+        margin-left: 500px
+        margin-top: 141px
+        display: flex
+        flex-direction: column
+@media (max-width: $screen-lg)
+    .mapImgDescription
+        margin-right: 15px
+    .mapInfo
+        margin-right: 15px
+    
+    .mapImgDescriptionBlock
+        width: 702px
+        height: 200px
+        position: absolute
+        background: #FFFFFF;
+        box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.0758039)
+        display: flex
+        flex-direction: row
+    .mapPos
+        margin-left: 20px
+        margin-top: 27px
+        display: flex
+    .mapClass
+        width: 702px
+        height: 500px
+    .mapClassEl
+        width: 702px
+        height: 500px
+    .mapLoad
+        width: 702px
+        height: 500px
 
 
+@media (max-width: $screen-md)
+    
+    .city-container
+        display: grid
+        grid-template-rows: 129px 129px 
+        grid-template-columns: 250px 250px
+        grid-gap: 2vw
+    .mapClass
+        width: 576px
+        
+    .mapClassEl
+        width: 576px
+        
+    .mapLoad
+        width: 576px
+        
+    .mapImgDescriptionBlock
+        width: 576px

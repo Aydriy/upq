@@ -1,3 +1,5 @@
+@import "../_breackpoints"
+    
 .sliderConteiner
     width: 1200px
     display: flex
@@ -14,6 +16,7 @@
 
 
 .btn-conteiner
+    margin-top: 227px
     height: 130px
     display: flex
     background: #FBFBFB
@@ -44,10 +47,10 @@ button:disabled
     
 
 .stack-slider-1
-    z-index: 1
+    z-index: 0
 
 .stack-slider-2
-    z-index: 0
+    z-index: -1
     position: absolute
     margin-left: 120px
     opacity: 0.7
@@ -55,7 +58,7 @@ button:disabled
 
 
 .stack-slider-3
-    z-index: -1
+    z-index: -2
     position: absolute
     margin-left: 200px
     opacity: 0.2
@@ -90,4 +93,33 @@ button:disabled
 
 .btnLeft
     justify-content: flex-end
+
+
+
+
+@media (max-width: 1260px)
+    .container-textfoto
+        display: flex
+        flex-direction: column-reverse
+    .sliderConteiner
+        width: auto
+    .description-con
+        display: flex
+        justify-content: center
+    .container-description
+        display: flex
+        flex-direction: column-reverse
+    .btn-conteiner
+        margin-top: 30px
+        margin-bottom: 30px
+    .slide3
+        height: 343px
+    .slide2
+        height: 403px
+    .slide
+        height: 530px
+    .stack-slider-2
+        margin-left: 75px
+    .stack-slider-3
+        margin-left: 150px
 
