@@ -92,13 +92,11 @@ class Header extends React.Component {
                   <ul className={s.navelement}>
                     <li className={s.navEl}>
                       <NavLink to="/home" activeClassName={s.active}>
-                        {" "}
                         Home
                       </NavLink>
                     </li>
                     <li className={s.navEl}>
                       <NavLink to="/services" activeClassName={s.active}>
-                        {" "}
                         Services
                       </NavLink>
                     </li>
