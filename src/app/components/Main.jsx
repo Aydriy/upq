@@ -25,7 +25,7 @@ class Main extends React.Component {
       triggerElement: "#scrollStarts",
       duration: "300%",
 
-      triggerHook: 0.5,
+      triggerHook: 0.45,
     })
       .setTween(this.myTween)
       .addTo(this.controller);
