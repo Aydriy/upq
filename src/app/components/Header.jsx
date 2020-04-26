@@ -4,6 +4,7 @@ import LoopModeInfinityLoop from "./Swiper.jsx";
 import s from "../../sass/blocks/_navbar.module.sass";
 import { NavLink } from "react-router-dom";
 import Burger from "./Burger.jsx";
+import { Link } from "react-scroll";
 
 class Header extends React.Component {
   state = {
@@ -13,12 +14,12 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <header className="header ">
+        <header className="header " id="home">
           <div className="maskdiv">
             <img src={Mask} alt="logo" className="mask" />
           </div>
 
-          <nav className="nav container ">
+          <nav className="nav ">
             <div className="containerNav container">
               <div className={this.state.show ? "logo" : "logo logo-active"}>
                 <svg
@@ -43,28 +44,52 @@ class Header extends React.Component {
               <div className="navItem">
                 <ul className={s.navelement}>
                   <li className={s.navEl}>
-                    <NavLink to="/home" activeClassName={s.active}>
-                      {" "}
+                    <Link
+                      activeClass="active"
+                      to="home"
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={1000}
+                    >
                       Home
-                    </NavLink>
+                    </Link>
                   </li>
                   <li className={s.navEl}>
-                    <NavLink to="/services" activeClassName={s.active}>
-                      {" "}
+                    <Link
+                      activeClass="active"
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={1000}
+                    >
                       Services
-                    </NavLink>
+                    </Link>
                   </li>
                   <li className={s.navEl}>
-                    <NavLink to="/team" activeClassName={s.active}>
-                      {" "}
+                    <Link
+                      activeClass="active"
+                      to="team"
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={1000}
+                    >
                       Team
-                    </NavLink>
+                    </Link>
                   </li>
                   <li className={s.navEl}>
-                    <NavLink to="/contactus" activeClassName={s.active}>
-                      {" "}
+                    <Link
+                      activeClass="active"
+                      to="contactus"
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={1000}
+                    >
                       Contact Us
-                    </NavLink>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -91,26 +116,52 @@ class Header extends React.Component {
                 <div className="burger-nav__navElems">
                   <ul className={s.navelement}>
                     <li className={s.navEl}>
-                      <NavLink to="/home" activeClassName={s.active}>
+                      <Link
+                        activeClass="active"
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration={1000}
+                      >
                         Home
-                      </NavLink>
+                      </Link>
                     </li>
                     <li className={s.navEl}>
-                      <NavLink to="/services" activeClassName={s.active}>
+                      <Link
+                        activeClass="active"
+                        to="services"
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration={1000}
+                      >
                         Services
-                      </NavLink>
+                      </Link>
                     </li>
                     <li className={s.navEl}>
-                      <NavLink to="/team" activeClassName={s.active}>
-                        {" "}
+                      <Link
+                        activeClass="active"
+                        to="team"
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration={1000}
+                      >
                         Team
-                      </NavLink>
+                      </Link>
                     </li>
                     <li className={s.navEl}>
-                      <NavLink to="/contactus" activeClassName={s.active}>
-                        {" "}
+                      <Link
+                        activeClass="active"
+                        to="contactus"
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration={1000}
+                      >
                         Contact Us
-                      </NavLink>
+                      </Link>
                     </li>
                   </ul>
                 </div>

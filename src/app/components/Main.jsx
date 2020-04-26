@@ -25,18 +25,20 @@ class Main extends React.Component {
       triggerElement: "#scrollStarts",
       duration: "300%",
 
-      triggerHook: 0.45,
+      triggerHook: 0.5,
     })
       .setTween(this.myTween)
       .addTo(this.controller);
     this.myTween.to(this.pointBlue, {
       motionPath: this.path,
+      ease: 0.03,
+      speed: 0,
     });
   }
 
   render() {
     return (
-      <div className="main">
+      <div className="main" id="services">
         <div className="container">
           <div className="point-line animation" id="scrollStarts">
             <div className="point-blue ">

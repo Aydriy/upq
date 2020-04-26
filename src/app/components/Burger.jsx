@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Burger extends React.Component {
   state = {
-    show: true
+    show: true,
   };
 
   render() {

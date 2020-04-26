@@ -84,7 +84,7 @@ class SliderPerson extends React.Component {
 
   render() {
     return (
-      <div className="sliderConteiner">
+      <div className="sliderConteiner" id="team">
         <div className="carusel-conteiner">
           <div className="container-textfoto">
             <div className="description-con">

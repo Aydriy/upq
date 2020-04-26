@@ -9,7 +9,7 @@ import GoogleMapsDetroit from "./GoogleMap/GoogleMapsDetroit.jsx";
 
 function Maps() {
   return (
-    <div className="maps">
+    <div className="maps" id="contactus">
       <Router>
         <div className="container containerMaps">
           <div className="city">
