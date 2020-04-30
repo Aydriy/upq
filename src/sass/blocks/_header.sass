@@ -1,7 +1,6 @@
 @import "_breackpoints"
     
-.nav
-    display: flex
+
     
 
 .logo
@@ -37,6 +36,7 @@
     z-index: 1
     overflow: hidden
     position: relative
+    
     
 
 .navItem
@@ -87,7 +87,7 @@
 .burgerButton
     z-index: 100
     position: relative
-    
+    margin-top: -10px
     
 
 .mask
@@ -174,18 +174,6 @@
     transform: translateX(-100%)
 
 
-.nav
-    position: fixed
-    z-index: 100
-    left: 0
-    right: 0
-    padding-bottom: 40px
-    width: 100%
-    background: linear-gradient(0deg, rgba(5,13,29,0) 0%, rgba(5,13,29,0.5368522408963585) 100%);
-
-    
-
-
 
 ._navbar_navEl__1ONAz > .active
     border-bottom: 1px solid #ffffff
@@ -201,5 +189,23 @@
 //     z-index: 100
 //     display: none
     
+.nav
+    position: absolute
+    z-index: 100
+    left: 0
+    right: 0
+    transition: 0.3s
 
 
+.scrolled
+    position: fixed
+    padding-bottom: 30px
+    width: 100%
+    background: linear-gradient(0deg, rgba(5,13,29,0.5) 0%, rgba(5,13,29,0.5368522408963585) 100%);
+    transform: translateY(100%)
+    top: -80px
+
+@media (max-width: $screen-md)
+    .scrolled
+        padding-bottom: 20px
+        top: -100px

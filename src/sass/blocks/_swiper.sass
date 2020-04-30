@@ -158,3 +158,121 @@
     position: absolute
 
 
+.linkPerson a
+    text-decoration: none
+    height: 16px
+    font-family: Gilroy;
+    font-size: 16px
+    line-height: 16px
+    letter-spacing: 3px
+    text-transform: uppercase
+    color: #6C6C6C
+    margin-right: 21px
+    margin-left: 10px
+
+.facebook,.linkedin ,.twitter 
+    display: flex
+    align-items: center
+    
+.facebook:hover,.linkedin:hover ,.twitter:hover
+    .leaflet-overlay-pane
+        border-radius: 50%
+        box-shadow: 0 0 0 0 rgba(#118DCE, 1);
+        transform: scale(1);
+        animation: pulse 1.5s infinite;
+    
+.linkPerson 
+    margin-top: 43px
+    display: flex
+    justify-content: flex-start
+    
+
+.facebook   
+    transition: transform 0.3s 
+    padding-bottom: 10px
+    padding-top: 10px
+    cursor: pointer
+
+.facebook:hover
+    transform: translateY(-3px)
+    transition: transform 0.3s
+    a
+        color: #3E5790
+  
+    
+
+.linkedin 
+    transition: transform 0.3s 
+    padding-bottom: 10px
+    padding-top: 10px
+    cursor: pointer
+
+.linkedin:hover
+    transform: translateY(-3px)
+    transition: transform 0.3s
+    a
+        color: #118DCE
+    
+
+
+.twitter 
+    transition: transform 0.3s 
+    padding-bottom: 10px
+    padding-top: 10px
+    cursor: pointer
+
+.twitter:hover
+    transform: translateY(-3px)
+    transition: transform 0.3s
+    a
+        color: #2962ff
+
+
+
+
+
+
+@keyframes pulse 
+    0%
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(#118DCE, 0.7);
+	
+
+    70%
+        transform: scale(1);
+        box-shadow: 0 0 0 7px rgba(#118DCE, 0);
+	
+
+    100%
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(#118DCE, 0);
+	
+
+  
+// .leaflet-overlay-pane path 
+//     stroke: #29A0EC
+//     -webkit-animation: pulsate 2s ease-out
+//     -webkit-animation-iteration-count: infinite
+//     -moz-animation: pulsate 2s ease-out
+//     -moz-animation-iteration-count: infinite
+//     -ms-animation: pulsate 2s ease-out
+//     -ms-animation-iteration-count: infinite
+//     animation: pulsate 2s ease-out
+//     animation-iteration-count: infinite
+
+
+
+
+
+// @keyframes pulsate 
+//     0%     
+//         opacity: 0.4
+//         stroke-width: 2
+//     50%   
+//         opacity: 1.0
+//         stroke-width: 3
+//     100%   
+//         opacity: 0.4
+//         stroke-width: 2
+
+

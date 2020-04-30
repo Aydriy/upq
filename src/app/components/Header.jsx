@@ -4,12 +4,29 @@ import LoopModeInfinityLoop from "./Swiper.jsx";
 import s from "../../sass/blocks/_navbar.module.sass";
 import { NavLink } from "react-router-dom";
 import Burger from "./Burger.jsx";
-import { Link } from "react-scroll";
+import { Link, Element } from "react-scroll";
 
 class Header extends React.Component {
   state = {
     show: true,
+    scrolled: false,
   };
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      const isTop = window.scrollY < 1000;
+
+      if (isTop !== true) {
+        this.setState({ scrolled: true });
+      } else {
+        this.setState({ scrolled: false });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll");
+  }
 
   render() {
     return (
@@ -19,7 +36,7 @@ class Header extends React.Component {
             <img src={Mask} alt="logo" className="mask" />
           </div>
 
-          <nav className="nav ">
+          <nav className={this.state.scrolled ? "nav scrolled" : "nav"}>
             <div className="containerNav container">
               <div className={this.state.show ? "logo" : "logo logo-active"}>
                 <svg

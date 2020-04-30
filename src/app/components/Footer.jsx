@@ -1,6 +1,4 @@
 import React from "react";
-import s from "../../sass/blocks/_navbar.module.sass";
-import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
 function Footer() {
