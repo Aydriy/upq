@@ -2,9 +2,8 @@ import React from "react";
 import Mask from "../../image/header/mask.png";
 import LoopModeInfinityLoop from "./Swiper.jsx";
 import s from "../../sass/blocks/_navbar.module.sass";
-import { NavLink } from "react-router-dom";
 import Burger from "./Burger.jsx";
-import { Link, Element } from "react-scroll";
+import { Link } from "react-scroll";
 
 class Header extends React.Component {
   state = {
@@ -14,7 +13,7 @@ class Header extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 1000;
+      const isTop = window.scrollY < 100;
 
       if (isTop !== true) {
         this.setState({ scrolled: true });
