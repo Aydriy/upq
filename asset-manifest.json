@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/upq/static/css/main.6fdff36c.chunk.css",
+    "main.css": "/upq/static/css/main.cb692b38.chunk.css",
     "main.js": "/upq/static/js/main.c1303404.chunk.js",
     "main.js.map": "/upq/static/js/main.c1303404.chunk.js.map",
     "runtime-main.js": "/upq/static/js/runtime-main.ab18817b.js",
@@ -8,9 +8,9 @@
     "static/js/2.367d63a6.chunk.js": "/upq/static/js/2.367d63a6.chunk.js",
     "static/js/2.367d63a6.chunk.js.map": "/upq/static/js/2.367d63a6.chunk.js.map",
     "index.html": "/upq/index.html",
-    "precache-manifest.4e6494e1c0d5f34357fd1b0e1d3f6cf5.js": "/upq/precache-manifest.4e6494e1c0d5f34357fd1b0e1d3f6cf5.js",
+    "precache-manifest.c64c25c7111bf6a44e93e21c48156184.js": "/upq/precache-manifest.c64c25c7111bf6a44e93e21c48156184.js",
     "service-worker.js": "/upq/service-worker.js",
-    "static/css/main.6fdff36c.chunk.css.map": "/upq/static/css/main.6fdff36c.chunk.css.map",
+    "static/css/main.cb692b38.chunk.css.map": "/upq/static/css/main.cb692b38.chunk.css.map",
     "static/js/2.367d63a6.chunk.js.LICENSE.txt": "/upq/static/js/2.367d63a6.chunk.js.LICENSE.txt",
     "static/media/style.sass": "/upq/static/media/Oval.8a64e658.png",
     "static/media/Person.png": "/upq/static/media/Person.ead28026.png",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.ab18817b.js",
     "static/js/2.367d63a6.chunk.js",
-    "static/css/main.6fdff36c.chunk.css",
+    "static/css/main.cb692b38.chunk.css",
     "static/js/main.c1303404.chunk.js"
   ]
 }
