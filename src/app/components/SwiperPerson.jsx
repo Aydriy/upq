@@ -4,8 +4,26 @@ import pc2 from "../../image/swiperPerson/Person2.jpg";
 import pc3 from "../../image/swiperPerson/Person3.jpg";
 import pc4 from "../../image/swiperPerson/Person4.jpg";
 import pc5 from "../../image/swiperPerson/Person5.jpg";
-import PointLink from "./Points/PointLink.jsx";
 
+const PointLink = (props) => {
+  return (
+    <svg
+      className="linkPoint leaflet-overlay-pane"
+      width="5"
+      height="5"
+      viewBox="0 0 5 5"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.5 5C3.88071 5 5 3.88071 5 2.5C5 1.11929 3.88071 0 2.5 0C1.11929 0 0 1.11929 0 2.5C0 3.88071 1.11929 5 2.5 5Z"
+        fill="#D8D8D8"
+      />
+    </svg>
+  );
+};
 let link1 = (
   <div className="linkPerson">
     <div className="facebook">
@@ -24,62 +42,98 @@ let link1 = (
 );
 let link2 = (
   <div className="linkPerson">
-    <PointLink />
-    <a href="#">Facebook</a>
-    <PointLink />
-    <a href="#">Linkedin</a>
-    <PointLink />
-    <a href="#">twitter</a>
+    <div className="facebook">
+      <PointLink />
+      <a href="#">Facebook</a>
+    </div>
+    <div className="linkedin">
+      <PointLink />
+      <a href="#">Linkedin</a>
+    </div>
+    <div className="twitter">
+      <PointLink />
+      <a href="#">twitter</a>
+    </div>
   </div>
 );
 let link3 = (
   <div className="linkPerson">
-    <PointLink />
-    <a href="#">Facebook</a>
-    <PointLink />
-    <a href="#">Linkedin</a>
-    <PointLink />
-    <a href="#">twitter</a>
+    <div className="facebook">
+      <PointLink />
+      <a href="#">Facebook</a>
+    </div>
+    <div className="linkedin">
+      <PointLink />
+      <a href="#">Linkedin</a>
+    </div>
+    <div className="twitter">
+      <PointLink />
+      <a href="#">twitter</a>
+    </div>
   </div>
 );
 let link4 = (
   <div className="linkPerson">
-    <PointLink />
-    <a href="#">Facebook</a>
-    <PointLink />
-    <a href="#">Linkedin</a>
-    <PointLink />
-    <a href="#">twitter</a>
+    <div className="facebook">
+      <PointLink />
+      <a href="#">Facebook</a>
+    </div>
+    <div className="linkedin">
+      <PointLink />
+      <a href="#">Linkedin</a>
+    </div>
+    <div className="twitter">
+      <PointLink />
+      <a href="#">twitter</a>
+    </div>
   </div>
 );
 let link5 = (
   <div className="linkPerson">
-    <PointLink />
-    <a href="#">Facebook</a>
-    <PointLink />
-    <a href="#">Linkedin</a>
-    <PointLink />
-    <a href="#">twitter</a>
+    <div className="facebook">
+      <PointLink />
+      <a href="#">Facebook</a>
+    </div>
+    <div className="linkedin">
+      <PointLink />
+      <a href="#">Linkedin</a>
+    </div>
+    <div className="twitter">
+      <PointLink />
+      <a href="#">twitter</a>
+    </div>
   </div>
 );
 let link6 = (
   <div className="linkPerson">
-    <PointLink />
-    <a href="#">Facebook</a>
-    <PointLink />
-    <a href="#">Linkedin</a>
-    <PointLink />
-    <a href="#">twitter</a>
+    <div className="facebook">
+      <PointLink />
+      <a href="#">Facebook</a>
+    </div>
+    <div className="linkedin">
+      <PointLink />
+      <a href="#">Linkedin</a>
+    </div>
+    <div className="twitter">
+      <PointLink />
+      <a href="#">twitter</a>
+    </div>
   </div>
 );
 let link7 = (
   <div className="linkPerson">
-    <PointLink />
-    <a href="#">Facebook</a>
-    <PointLink />
-    <a href="#">Linkedin</a>
-    <PointLink />
-    <a href="#">twitter</a>
+    <div className="facebook">
+      <PointLink />
+      <a href="#">Facebook</a>
+    </div>
+    <div className="linkedin">
+      <PointLink />
+      <a href="#">Linkedin</a>
+    </div>
+    <div className="twitter">
+      <PointLink />
+      <a href="#">twitter</a>
+    </div>
   </div>
 );
 
@@ -162,6 +216,38 @@ class SliderPerson extends React.Component {
   }
 
   render() {
+    const NextArrow = () => {
+      return (
+        <svg
+          width="28"
+          height="8"
+          viewBox="0 0 28 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 4.49123V3.50877H25.7357L22.4497 0.701754L23.2781 0L28 4L23.2781 8L22.4221 7.29825L25.7357 4.49123H0Z"
+            fill="#00A031"
+          />
+        </svg>
+      );
+    };
+    const PrevArrow = () => {
+      return (
+        <svg
+          width="28"
+          height="8"
+          viewBox="0 0 28 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M28 4.49123V3.50877H2.2643L5.5503 0.701754L4.72189 0L0 4L4.72189 8L5.57791 7.29825L2.2643 4.49123H28Z"
+            fill="#00A031"
+          />
+        </svg>
+      );
+    };
     return (
       <div className="sliderConteiner" id="team">
         <div className="carusel-conteiner">
@@ -213,18 +299,7 @@ class SliderPerson extends React.Component {
                         <div className="buttonArrowEndText">
                           <div className="nextEndArrow">
                             <p className="arrowText">NEXT</p>
-                            <svg
-                              width="28"
-                              height="8"
-                              viewBox="0 0 28 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 4.49123V3.50877H25.7357L22.4497 0.701754L23.2781 0L28 4L23.2781 8L22.4221 7.29825L25.7357 4.49123H0Z"
-                                fill="#00A031"
-                              />
-                            </svg>
+                            <NextArrow />
                           </div>
                           <div>
                             <h3 className="arrowName">
@@ -248,18 +323,7 @@ class SliderPerson extends React.Component {
                       >
                         <div className="buttonArrowEndText">
                           <div className="prevEndArrow">
-                            <svg
-                              width="28"
-                              height="8"
-                              viewBox="0 0 28 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M28 4.49123V3.50877H2.2643L5.5503 0.701754L4.72189 0L0 4L4.72189 8L5.57791 7.29825L2.2643 4.49123H28Z"
-                                fill="#00A031"
-                              />
-                            </svg>
+                            <PrevArrow />
                             <p className="arrowText">PREV</p>
                           </div>
                           <div>

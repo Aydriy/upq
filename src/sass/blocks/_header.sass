@@ -34,7 +34,6 @@
     background-repeat: no-repeat
     background-size: cover
     z-index: 1
-    overflow: hidden
     position: relative
     
     
@@ -111,7 +110,7 @@
     justify-content: center
     align-items: center
     margin-bottom: 109px
-    margin-top: 204px
+    padding-top: 450px
     width: 1540px
     height: 580px
     margin-right: auto
@@ -192,6 +191,7 @@
 //     display: none
     
 .nav
+    position: absolute
     z-index: 100
     left: 0
     right: 0
@@ -202,7 +202,6 @@
     position: fixed !important
     z-index: 100
     padding-bottom: 30px
-    width: 100%
     background: linear-gradient(0deg, rgba(5,13,29,0.5) 0%, rgba(5,13,29,0.5368522408963585) 100%);
     top: -80px
     transform: translateY(100%)
@@ -215,3 +214,23 @@
         top: -100px
     .logo
         padding-top: 25px !important
+
+
+.goTop
+    display: inline-block
+    position: fixed
+    right: -100px
+    bottom: 20px
+    z-index: 100;
+    opacity: 0.6;
+    transition: 0.3s;
+    border-radius: 50%
+    background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+
+.scrolledBtn:hover
+    cursor: pointer
+    opacity: 1;
+    
+
+.scrolledBtn
+    transform: translateX(-120px);
