@@ -9,19 +9,27 @@ class Header extends React.Component {
   state = {
     show: true,
     scrolled: false,
+    scrolledNav: false,
     scrolledBtn: false,
   };
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 1000;
+      const isTop = window.scrollY < 950;
 
       if (isTop !== true) {
         this.setState({ scrolled: true });
       } else {
         this.setState({ scrolled: false });
       }
-      const isGoTop = window.scrollY < 2500;
+      const isNav = window.scrollY < 200;
+
+      if (isNav !== true) {
+        this.setState({ scrolledNav: true });
+      } else {
+        this.setState({ scrolledNav: false });
+      }
+      const isGoTop = window.scrollY < 2000;
       if (isGoTop !== true) {
         this.setState({ scrolledBtn: true });
       } else {
@@ -56,8 +64,9 @@ class Header extends React.Component {
     };
     const NavigationLink = (props) => {
       return (
-        <li className={s.navEl}>
+        <li className={s.navEl} onClick={this.handleClick}>
           <Link
+            onClick={() => this.setState({ show: !this.state.show })}
             activeClass="active"
             to={props.to}
             spy={true}
@@ -97,6 +106,7 @@ class Header extends React.Component {
         </svg>
       );
     };
+
     return (
       <div>
         <header className="header " id="home">
@@ -104,7 +114,15 @@ class Header extends React.Component {
             <img src={Mask} alt="logo" className="mask" />
           </div>
 
-          <nav className={this.state.scrolled ? "nav scrolled" : "nav"}>
+          <nav
+            className={
+              this.state.scrolled
+                ? "nav scrolled"
+                : "nav " && this.state.scrolledNav
+                ? "nav  scrolledNav "
+                : "nav "
+            }
+          >
             <div className="containerNav container">
               <div className={this.state.show ? "logo" : "logo logo-active"}>
                 <LogoImg />

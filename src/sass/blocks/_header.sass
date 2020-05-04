@@ -135,6 +135,7 @@
         display: none
 
 .burger-nav
+    padding-top: 20px
     display: inline-block
     position: absolute
     right: -350px
@@ -195,18 +196,37 @@
     z-index: 100
     left: 0
     right: 0
-    transition: 0.3s
+    transition: 1s
 
 
 .scrolled
-    position: fixed !important
+    border-radius: 0 0 20px 20px
+    -webkit-box-shadow: 0px 10px 22px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 22px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 22px -13px rgba(0,0,0,0.75);
+    position: fixed 
     z-index: 100
     padding-bottom: 30px
-    background: linear-gradient(0deg, rgba(5,13,29,0.5) 0%, rgba(5,13,29,0.5368522408963585) 100%);
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    // background: linear-gradient(0deg, rgba(5,13,29,0.5) 0%, rgba(5,13,29,0.5368522408963585) 100%);
     top: -80px
     transform: translateY(100%)
+    transition: 1s
     .logo
         padding-top: 35px
+
+.scrolledNav
+    position: fixed 
+    z-index: 100
+    padding-bottom: 30px
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    top: -80px
+    transition: 1s
+    .logo
+        padding-top: 35px
+
+.scrolledNav .nav-burger-wrapper
+    display: none
 
 @media (max-width: $screen-md)
     .scrolled
@@ -214,7 +234,8 @@
         top: -100px
     .logo
         padding-top: 25px !important
-
+    .scrolledNav
+        top: -120px
 
 .goTop
     display: inline-block
@@ -225,7 +246,7 @@
     opacity: 0.6;
     transition: 0.3s;
     border-radius: 50%
-    background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    
 
 .scrolledBtn:hover
     cursor: pointer
