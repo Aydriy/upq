@@ -138,8 +138,8 @@ let link7 = (
 );
 
 class SliderPerson extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       link: [link1, link2, link3, link4, link5, link6, link7],

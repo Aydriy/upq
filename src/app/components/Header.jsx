@@ -2,11 +2,12 @@ import React from "react";
 import Mask from "../../image/header/mask.png";
 import LoopModeInfinityLoop from "./Swiper.jsx";
 import s from "../../sass/blocks/_navbar.module.sass";
-import Burger from "./Burger.jsx";
+// import Burger from "./Burger.jsx";
 import { Link } from "react-scroll";
 
 class Header extends React.Component {
   state = {
+    name: "andr",
     show: true,
     scrolled: false,
     scrolledNav: false,
@@ -66,7 +67,7 @@ class Header extends React.Component {
       return (
         <li className={s.navEl} onClick={this.handleClick}>
           <Link
-            onClick={() => this.setState({ show: !this.state.show })}
+            onClick={() => this.setState({ show: !this.props.show })}
             activeClass="active"
             to={props.to}
             spy={true}
@@ -79,6 +80,7 @@ class Header extends React.Component {
         </li>
       );
     };
+
     const GoToTop = () => {
       return (
         <svg
@@ -107,6 +109,37 @@ class Header extends React.Component {
       );
     };
 
+    let links = [
+      { to: "home", name: "Home" },
+      { to: "services", name: "Services" },
+      { to: "team", name: "Team" },
+      { to: "contactus", name: "Contact Us" },
+    ];
+
+    let linksElement = links.map((l) => (
+      <NavigationLink to={l.to} name={l.name} />
+    ));
+
+    let Burger = () => {
+      return (
+        <div className="item-container">
+          <section className="section-container">
+            <div
+              id="humburgerId"
+              className={
+                this.state.show ? "hamburger" : "hamburger activeHamburger"
+              }
+              onClick={() => this.setState({ show: !this.state.show })}
+            >
+              <span className="line line-1"></span>
+              <span className="line line-2"></span>
+              <span className="line line-3"></span>
+            </div>
+          </section>
+        </div>
+      );
+    };
+
     return (
       <div>
         <header className="header " id="home">
@@ -131,19 +164,11 @@ class Header extends React.Component {
                 </div>
               </div>
               <div className="navItem">
-                <ul className={s.navelement}>
-                  <NavigationLink to="home" name="Home" />
-                  <NavigationLink to="services" name="Services" />
-                  <NavigationLink to="team" name="Team" />
-                  <NavigationLink to="contactus" name="Contact Us" />
-                </ul>
+                <ul className={s.navelement}>{linksElement}</ul>
               </div>
             </div>
             <div className="nav-burger-wrapper">
-              <div
-                className="burgerButton"
-                onClick={() => this.setState({ show: !this.state.show })}
-              >
+              <div className="burgerButton">
                 <Burger className="test" />
               </div>
               <div
@@ -159,12 +184,7 @@ class Header extends React.Component {
                 </div>
 
                 <div className="burger-nav__navElems">
-                  <ul className={s.navelement}>
-                    <NavigationLink to="home" name="Home" />
-                    <NavigationLink to="services" name="Services" />
-                    <NavigationLink to="team" name="Team" />
-                    <NavigationLink to="contactus" name="Contact Us" />
-                  </ul>
+                  <ul className={s.navelement}>{linksElement}</ul>
                 </div>
               </div>
             </div>

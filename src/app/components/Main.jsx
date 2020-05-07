@@ -367,6 +367,7 @@ class Main extends React.Component {
             </div>
           </div>
         </div>
+        {this.props.linksElement}
       </div>
     );
   }

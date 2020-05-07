@@ -7,7 +7,7 @@ import GoogleMapsNewYork from "./GoogleMap/GoogleMapsNewYork.jsx";
 import GoogleMapsBoston from "./GoogleMap/GoogleMapsBoston.jsx";
 import GoogleMapsDetroit from "./GoogleMap/GoogleMapsDetroit.jsx";
 
-function Maps() {
+function Maps(props) {
   const MapCity = (props) => {
     return (
       <div className={`${props.nameCity} ${m.cityContainer}`}>
@@ -24,6 +24,15 @@ function Maps() {
       </div>
     );
   };
+
+  let mapCityElements = props.mapCityArr.map((el) => (
+    <MapCity
+      nameCity={el.nameCity}
+      to={el.to}
+      pName={el.pName}
+      labelName={el.labelName}
+    />
+  ));
 
   return (
     <div className="maps" id="contactus">
@@ -43,32 +52,7 @@ function Maps() {
               <h2>2005 Stokes Isle Apt. 896, Venaville, New York 10010</h2>
             </div>
             <div className="city-container-wrapper">
-              <div className="city-container">
-                <MapCity
-                  nameCity="m.losAngeles"
-                  to="/losangeles"
-                  pName="Los Angeles, USA"
-                  labelName="2005 Stokes Isle Apt. 896, Venaville, New York 10010"
-                />
-                <MapCity
-                  nameCity="m.newYork"
-                  to="/newyork"
-                  pName="NewYork, USA"
-                  labelName="2005 Stokes Isle Apt. 896, Venaville, New York 10010"
-                />
-                <MapCity
-                  nameCity="m.boston"
-                  to="/boston"
-                  pName="Boston, USA"
-                  labelName="2005 Stokes Isle Apt. 896, Venaville, New York 10010"
-                />
-                <MapCity
-                  nameCity="m.detroit"
-                  to="/detroit"
-                  pName="Detroit, USA"
-                  labelName="2005 Stokes Isle Apt. 896, Venaville, New York 10010"
-                />
-              </div>
+              <div className="city-container">{mapCityElements}</div>
             </div>
           </div>
           <div className="cityMaps">
@@ -178,27 +162,94 @@ const ImgDescription = (props) => {
   );
 };
 
+let descriptions = [
+  {
+    city: "LosAngeles",
+    cityh2: ["2005 Stokes Isle Apt. 896", <br />, "LosAngeles 10010"],
+    mapDescriptionSecond1: "Work Schedule",
+    day1: "Mon - Sat: ",
+    clock1: " 11:00-19:00,",
+    day2: "Sun: ",
+    clock2: " 11:00-16:00,",
+    mapDescriptionSecond2: "Head Office",
+    listInfo1: "(0043) 568 456 902",
+    listInfo2: "(0041) 568 432 872",
+    mapDescriptionSecond3: "Head Office",
+    listInfo3: "hello@pad.architecture",
+    listInfo4: "support@pad.architecture",
+  },
+  {
+    city: "NewYork",
+    cityh2: ["2005 Stokes Isle Apt. 896", <br />, "NewYork 10010"],
+    mapDescriptionSecond1: "Work Schedule",
+    day1: "Mon - Sat: ",
+    clock1: " 11:00-19:00,",
+    day2: "Sun: ",
+    clock2: " 11:00-16:00,",
+    mapDescriptionSecond2: "Head Office",
+    listInfo1: "(0043) 568 456 902",
+    listInfo2: "(0041) 568 432 872",
+    mapDescriptionSecond3: "Head Office",
+    listInfo3: "hello@pad.architecture",
+    listInfo4: "support@pad.architecture",
+  },
+  {
+    city: "Boston",
+    cityh2: ["2005 Stokes Isle Apt. 896", <br />, "Boston 10010"],
+    mapDescriptionSecond1: "Work Schedule",
+    day1: "Mon - Sat: ",
+    clock1: " 11:00-19:00,",
+    day2: "Sun: ",
+    clock2: " 11:00-16:00,",
+    mapDescriptionSecond2: "Head Office",
+    listInfo1: "(0043) 568 456 902",
+    listInfo2: "(0041) 568 432 872",
+    mapDescriptionSecond3: "Head Office",
+    listInfo3: "hello@pad.architecture",
+    listInfo4: "support@pad.architecture",
+  },
+  {
+    city: "Detroit",
+    cityh2: ["2005 Stokes Isle Apt. 896", <br />, "Detroit 10010"],
+    mapDescriptionSecond1: "Work Schedule",
+    day1: "Mon - Sat: ",
+    clock1: " 11:00-19:00,",
+    day2: "Sun: ",
+    clock2: " 11:00-16:00,",
+    mapDescriptionSecond2: "Head Office",
+    listInfo1: "(0043) 568 456 902",
+    listInfo2: "(0041) 568 432 872",
+    mapDescriptionSecond3: "Head Office",
+    listInfo3: "hello@pad.architecture",
+    listInfo4: "support@pad.architecture",
+  },
+];
+
+let descriptionsElement = descriptions.map((el) => (
+  <ImgDescription
+    city={el.city}
+    cityh2={el.cityh2}
+    mapDescriptionSecond1={el.mapDescriptionSecond1}
+    day1={el.day1}
+    clock1={el.clock1}
+    day2={el.day2}
+    clock2={el.clock2}
+    mapDescriptionSecond2={el.mapDescriptionSecond2}
+    listInfo1={el.listInfo1}
+    listInfo2={el.listInfo2}
+    mapDescriptionSecond3={el.mapDescriptionSecond3}
+    listInfo3={el.listInfo3}
+    listInfo4={el.listInfo4}
+  />
+));
+
 function LosAngeles() {
   return (
     <div className="LosAngelesPath">
       <div className="mapImg">
         <GoogleMapsLosAngeles />
       </div>
-      <ImgDescription
-        city="LosAngeles"
-        cityh2={["2005 Stokes Isle Apt. 896", <br />, "LosAngeles 10010"]}
-        mapDescriptionSecond1="Work Schedule"
-        day1="Mon - Sat: "
-        clock1=" 11:00-19:00,"
-        day2="Sun: "
-        clock2=" 11:00-16:00,"
-        mapDescriptionSecond2="Head Office"
-        listInfo1="(0043) 568 456 902"
-        listInfo2="(0041) 568 432 872"
-        mapDescriptionSecond3="Head Office"
-        listInfo3="hello@pad.architecture"
-        listInfo4="support@pad.architecture"
-      />
+      {descriptionsElement[0]}
     </div>
   );
 }
@@ -210,21 +261,7 @@ function NewYork() {
         <div className="mapImg">
           <GoogleMapsNewYork />
         </div>
-        <ImgDescription
-          city="NewYork"
-          cityh2={["2005 Stokes Isle Apt. 896", <br />, "New York 10010"]}
-          mapDescriptionSecond1="Work Schedule"
-          day1="Mon - Sat: "
-          clock1=" 11:00-19:00,"
-          day2="Sun: "
-          clock2=" 11:00-16:00,"
-          mapDescriptionSecond2="Head Office"
-          listInfo1="(0043) 568 456 902"
-          listInfo2="(0041) 568 432 872"
-          mapDescriptionSecond3="Head Office"
-          listInfo3="hello@pad.architecture"
-          listInfo4="support@pad.architecture"
-        />
+        {descriptionsElement[1]}
       </div>
     </div>
   );
@@ -237,21 +274,7 @@ function Boston() {
         <div className="mapImg">
           <GoogleMapsBoston />
         </div>
-        <ImgDescription
-          city="Boston"
-          cityh2={["2005 Stokes Isle Apt. 896", <br />, "Boston 10010"]}
-          mapDescriptionSecond1="Work Schedule"
-          day1="Mon - Sat: "
-          clock1=" 11:00-19:00,"
-          day2="Sun: "
-          clock2=" 11:00-16:00,"
-          mapDescriptionSecond2="Head Office"
-          listInfo1="(0043) 568 456 902"
-          listInfo2="(0041) 568 432 872"
-          mapDescriptionSecond3="Head Office"
-          listInfo3="hello@pad.architecture"
-          listInfo4="support@pad.architecture"
-        />
+        {descriptionsElement[2]}
       </div>
     </div>
   );
@@ -264,21 +287,7 @@ function Detroit() {
         <div className="mapImg">
           <GoogleMapsDetroit />
         </div>
-        <ImgDescription
-          city="Detroit"
-          cityh2={["2005 Stokes Isle Apt. 896", <br />, "Detroit 10010"]}
-          mapDescriptionSecond1="Work Schedule"
-          day1="Mon - Sat: "
-          clock1=" 11:00-19:00,"
-          day2="Sun: "
-          clock2=" 11:00-16:00,"
-          mapDescriptionSecond2="Head Office"
-          listInfo1="(0043) 568 456 902"
-          listInfo2="(0041) 568 432 872"
-          mapDescriptionSecond3="Head Office"
-          listInfo3="hello@pad.architecture"
-          listInfo4="support@pad.architecture"
-        />
+        {descriptionsElement[3]}
       </div>
     </div>
   );
